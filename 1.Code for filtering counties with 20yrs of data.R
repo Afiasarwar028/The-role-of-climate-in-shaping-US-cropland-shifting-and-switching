@@ -4,7 +4,6 @@ library(readxl)
 install.packages("writexl")
 library(writexl)
 
-# Assuming you've already loaded the data as 'data'
 barley <- "C:\\Users\\Folder\\UDel\\Research\\HarvestGRID_Data\\HG_original_Files\\Corn_IR.csv"
 data <- read.csv(barley)
 print(data)
@@ -21,12 +20,12 @@ counties_with_20_years_data <- data %>%
 filtered_original_data <- data %>%
   semi_join(counties_with_20_years_data, by = ("GEOID"))
 
-# Print the filtered original data
 print(filtered_original_data)
 
 # Save the filtered original data to a new CSV file
 path <- "C:\\Users\\Folder\\UDel\\Research\\HarvestGRID_Data\\20_Years_filter\\Corn_IR.xlsx"
 write_xlsx(filtered_original_data, path)
+
 
 
 
