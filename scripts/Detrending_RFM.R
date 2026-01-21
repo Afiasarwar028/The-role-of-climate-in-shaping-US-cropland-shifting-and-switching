@@ -28,3 +28,4 @@ print(detrended_df)
 
 output_path <- "C:\\Users\\Folder\\UDel\\Research\\Cass_ha_state_yield_detrended.csv"
 write.csv(detrended_df, output_path, row.names = FALSE)
+
